@@ -1,0 +1,6 @@
+@ConvoSphere_HostAddress = http://localhost:5006
+
+GET {{ConvoSphere_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

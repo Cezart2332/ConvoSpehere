@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Button, Flex,IconButton,Text,SimpleGrid,Image,Box,Icon,Separator } from "@chakra-ui/react"
-import { CircleUser,House,Search,Send,BadgePlus, CircleUserRound  } from 'lucide-react';
+import {House,Search,Send,BadgePlus, CircleUserRound  } from 'lucide-react';
 import {Link} from "react-router-dom"
 
 const Header = () => {
@@ -23,7 +23,7 @@ const Header = () => {
       >
           <Text textStyle="xl" fontWeight="bold">ConvoSphere</Text>
           <Flex flexDirection="column" gap="3">
-            <Button variant="ghost"><Icon><House /></Icon>Home</Button>
+          <Link to="/"><Button variant="ghost"><Icon><House /></Icon>Home</Button></Link>
             <Button variant="ghost"><Icon><Search /></Icon>Search</Button>
             <Button variant="ghost"><Icon><Send /></Icon>Messages</Button>
             <Button variant="ghost"><Icon><BadgePlus /></Icon>Post</Button>

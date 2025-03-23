@@ -1,17 +1,17 @@
 import { useState } from 'react'
 import Header from "@/components/Header.jsx";
-import Posts from "@/components/Posts.jsx"
+import RegisterForm from "@/components/RegisterForm"
 
-const Home = () => {
+const Profile = () => {
   return (
     <>
       <Header>
       </Header>
-      
+      <RegisterForm></RegisterForm>
     </>
 
     
   )
 }
 
-export default Home
+export default Profile
