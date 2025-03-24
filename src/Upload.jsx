@@ -1,13 +1,11 @@
 import { useState,useEffect } from 'react'
 import Header from "@/components/Header.jsx";
 import { useNavigate } from "react-router-dom";
-import {Button} from "@chakra-ui/react"
-import ProfileInfo from "@/components/ProfileInfo"
-
+import UploadForm from "@/components/UploadForm"
 
 
  
-const Profile = () => {
+const Upload = () => {
     const navigate = useNavigate()
     const [userData, setUserData] = useState(null)
 
@@ -17,22 +15,18 @@ const Profile = () => {
         if(!isLoggedIn){
             navigate("/Register")
         }
-        else{
-            setUserData(JSON.parse(user))
-        }
 
-    },[navigate])
-
+    },[])
 
   return (
     <>
       <Header>
       </Header>
-      <ProfileInfo></ProfileInfo>
+      <UploadForm></UploadForm>
     </>
 
     
   )
 }
 
-export default Profile
+export default Upload

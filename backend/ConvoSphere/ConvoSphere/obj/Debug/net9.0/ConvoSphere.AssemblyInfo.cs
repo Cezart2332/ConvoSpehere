@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ConvoSphere")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+16bce5a8a5ca1472d810453494cee350ca135651")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8357ac153beadce3ea8319885541bedd6cb2d995")]
 [assembly: System.Reflection.AssemblyProductAttribute("ConvoSphere")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ConvoSphere")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

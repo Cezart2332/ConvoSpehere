@@ -26,7 +26,7 @@ const Header = () => {
           <Link to="/"><Button variant="ghost"><Icon><House /></Icon>Home</Button></Link>
             <Button variant="ghost"><Icon><Search /></Icon>Search</Button>
             <Button variant="ghost"><Icon><Send /></Icon>Messages</Button>
-            <Button variant="ghost"><Icon><BadgePlus /></Icon>Post</Button>
+            <Link to="/Upload"><Button variant="ghost"><Icon><BadgePlus /></Icon>Post</Button></Link>
           </Flex>
           <Button variant="ghost">Settings</Button>
       </Flex>
@@ -42,7 +42,7 @@ const Header = () => {
         boxShadow="sm" 
         zIndex="999"
       >
-        <Link to="/profile"><IconButton variant="ghost" href="/Profile"><CircleUserRound></CircleUserRound></IconButton></Link> 
+        <Link to="/Profile"><IconButton variant="ghost"><CircleUserRound></CircleUserRound></IconButton></Link> 
       </Flex>
     </>
   )
