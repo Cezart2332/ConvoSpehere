@@ -8,7 +8,10 @@ import { Upload } from 'lucide-react';
  
 const UploadForm = () => {
 
+    const user =  JSON.parse(localStorage.getItem("user"))
+
     const[postData, setPostData] = useState({
+        email:`${user.email}`,
         image:"",
         description:""
     })
@@ -20,6 +23,37 @@ const UploadForm = () => {
         })
         console.log(e.target.value)
     }
+    const handleFileChange = (e) => {
+        const file = e.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onloadend = () => {
+                setPostData({
+                    ...postData,
+                    image: reader.result 
+                });
+            };
+            reader.readAsDataURL(file); 
+        }
+    };
+
+    const handleSumbit = async (e) => {
+        const response = await fetch("http://localhost:5006/api/posts/upload",{
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(postData)
+        })
+
+        if(!response.ok){
+            throw Error("Network Error")
+        }
+        try{
+            let data = await response.json()
+            console.log(data)
+        }catch(err){
+            console.log(`Error ${err}`)
+        }
+    }
 
 
 
@@ -30,7 +64,7 @@ const UploadForm = () => {
        <Flex ml="15%" gap="3rem" pt="5%"  mb="5">
         <VStack width="40%" gap="3">
             <FileUpload.Root maxW="xl" alignItems="stretch" maxFiles={1}>
-                <FileUpload.HiddenInput />
+                <FileUpload.HiddenInput onChange={handleFileChange} />
                 <FileUpload.Dropzone>
                     <Icon size="md" color="fg.muted">
                         <Upload></Upload>
@@ -42,6 +76,11 @@ const UploadForm = () => {
                 </FileUpload.Dropzone>
                 <FileUpload.List />
             </FileUpload.Root>
+            {postData.image && (
+                <Box mt="3">
+                    <img src={postData.image} alt="Preview" style={{ width: '100%', height: 'auto' }} />
+                </Box>
+            )}
             <Field.Root>
                 <Field.Label>
                 Description <Field.RequiredIndicator />
@@ -49,8 +88,9 @@ const UploadForm = () => {
                 <Textarea placeholder="Start typing..." type="description" name="description"  value={postData.description} onChange={handleChange}/>
                 <Field.ErrorText>Field is required</Field.ErrorText>
             </Field.Root>
-            <Button variant="outline" size="md" rounded="xl">Post</Button>
+            <Button variant="outline" size="md" rounded="xl" onClick={handleSumbit}>Post</Button>
         </VStack>
+        
 
             
        </Flex>

@@ -4,6 +4,12 @@ import {House,Search,Send,BadgePlus, CircleUserRound  } from 'lucide-react';
 import {Link} from "react-router-dom"
 
 const Header = () => {
+
+
+  const isLoggedIn = JSON.parse(localStorage.getItem("isLoggedIn")) || false; 
+  const user = isLoggedIn ? JSON.parse(localStorage.getItem("user")) || {} : {}; 
+
+
   return (
     <>
       <Flex 
@@ -24,7 +30,7 @@ const Header = () => {
           <Text textStyle="xl" fontWeight="bold">ConvoSphere</Text>
           <Flex flexDirection="column" gap="3">
           <Link to="/"><Button variant="ghost"><Icon><House /></Icon>Home</Button></Link>
-            <Button variant="ghost"><Icon><Search /></Icon>Search</Button>
+            <Link to="/Search"><Button variant="ghost"><Icon><Search /></Icon>Search</Button></Link>
             <Button variant="ghost"><Icon><Send /></Icon>Messages</Button>
             <Link to="/Upload"><Button variant="ghost"><Icon><BadgePlus /></Icon>Post</Button></Link>
           </Flex>
@@ -42,7 +48,7 @@ const Header = () => {
         boxShadow="sm" 
         zIndex="999"
       >
-        <Link to="/Profile"><IconButton variant="ghost"><CircleUserRound></CircleUserRound></IconButton></Link> 
+        <Link to={`/Profile/${user.username}`}><IconButton variant="ghost"><CircleUserRound></CircleUserRound></IconButton></Link> 
       </Flex>
     </>
   )

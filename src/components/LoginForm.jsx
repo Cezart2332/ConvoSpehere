@@ -36,7 +36,7 @@ const LoginForm = () => {
             console.log(`Succes: ${data}`)
             localStorage.setItem("isLoggedIn", "true");
             localStorage.setItem("user", JSON.stringify(data));
-            navigate("/Profile")
+            navigate(`/Profile/${data.username}`)
     
         }
         catch(err){

@@ -1,0 +1,79 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "WebScrapper/1.0.0": {
+        "dependencies": {
+          "OpenQA.Selenium.Chrome.ChromeDriverExtensions": "1.2.0",
+          "OpenQA.Selenium.Chrome.Fiddler": "1.0.0",
+          "Selenium.WebDriver": "4.30.0"
+        },
+        "runtime": {
+          "WebScrapper.dll": {}
+        }
+      },
+      "OpenQA.Selenium.Chrome.ChromeDriverExtensions/1.2.0": {
+        "dependencies": {
+          "Selenium.WebDriver": "4.30.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/OpenQA.Selenium.Chrome.ChromeDriverExtensions.dll": {
+            "assemblyVersion": "1.2.0.0",
+            "fileVersion": "1.2.0.0"
+          }
+        }
+      },
+      "OpenQA.Selenium.Chrome.Fiddler/1.0.0": {
+        "dependencies": {
+          "Selenium.WebDriver": "4.30.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/OpenQA.Selenium.Chrome.Fiddler.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Selenium.WebDriver/4.30.0": {
+        "runtime": {
+          "lib/net8.0/WebDriver.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WebScrapper/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "OpenQA.Selenium.Chrome.ChromeDriverExtensions/1.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-z5/MAdjFlHcECXN4sxS356Hul5iJD1vHznAwINo9YR3j+PXVU2PjgmkLEB6zvRLxzouL8qfNBioSWkxfvlsbMg==",
+      "path": "openqa.selenium.chrome.chromedriverextensions/1.2.0",
+      "hashPath": "openqa.selenium.chrome.chromedriverextensions.1.2.0.nupkg.sha512"
+    },
+    "OpenQA.Selenium.Chrome.Fiddler/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-I3dVq9fZgMS0fXuGS8ih/VuRa+byxHOI837bjhoxXug/lQ7omyUj2IcgQOq+zVDGBVXLg1osgwXIsCT3QyEzNA==",
+      "path": "openqa.selenium.chrome.fiddler/1.0.0",
+      "hashPath": "openqa.selenium.chrome.fiddler.1.0.0.nupkg.sha512"
+    },
+    "Selenium.WebDriver/4.30.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-POEESh6f408SNst9kT+mf4g9zVahIWXjo+/8qkjUt8dNRllD+am2Fdj30j5b54kpRIx5Nz2b08AREYvaOyQQMA==",
+      "path": "selenium.webdriver/4.30.0",
+      "hashPath": "selenium.webdriver.4.30.0.nupkg.sha512"
+    }
+  }
+}
